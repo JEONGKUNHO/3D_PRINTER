@@ -8,6 +8,16 @@
     android:gravity="center_vertical"
     tools:context=".SignupActivity">
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40sp"
+        android:text="JOIN"
+        android:textAlignment="center"
+        android:textColor="#AEAEAE"
+        android:textSize="50sp" />
+
     <EditText
         android:id="@+id/sign_email"
         android:layout_width="wrap_content"
@@ -15,7 +25,7 @@
         android:background="@null"
         android:layout_margin="8dp"
         android:hint="Email"/>
-    
+
     <EditText
         android:id="@+id/sign_password"
         android:layout_width="wrap_content"
@@ -26,9 +36,17 @@
 
     <Button
         android:id="@+id/sign_success"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
         android:layout_marginEnd="8dp"
-        android:text="Sign up"/>
+        android:text="회원가입" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="8dp"
+        android:text="이전" />
 </LinearLayout>

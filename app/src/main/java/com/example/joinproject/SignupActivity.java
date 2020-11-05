@@ -1,12 +1,13 @@
 package com.example.joinproject;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -36,30 +37,39 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
         mPasswordText = findViewById(R.id.sign_password);
 
         findViewById(R.id.sign_success).setOnClickListener(this);
+        findViewById(R.id.back).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        mAuth.createUserWithEmailAndPassword(mEmailText.getText().toString(), mPasswordText.getText().toString())
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            if (user != null) {
-                                Map<String, Object> userMap = new HashMap<>();
-                                userMap.put(FirebaseID.documentID, user.getUid());
-                                userMap.put(FirebaseID.email, mEmailText.getText().toString());
-                                userMap.put(FirebaseID.password, mPasswordText.getText().toString());
-                                mStore.collection(FirebaseID.user).document(user.getUid()).set(userMap, SetOptions.merge());
-                                finish();
+        switch (v.getId()) {
+            case R.id.sign_success:
+                mAuth.createUserWithEmailAndPassword(mEmailText.getText().toString(), mPasswordText.getText().toString())
+                        .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+                                    FirebaseUser user = mAuth.getCurrentUser();
+                                    if (user != null) {
+                                        Map<String, Object> userMap = new HashMap<>();
+                                        userMap.put(FirebaseID.documentID, user.getUid());
+                                        userMap.put(FirebaseID.email, mEmailText.getText().toString());
+                                        userMap.put(FirebaseID.password, mPasswordText.getText().toString());
+                                        mStore.collection(FirebaseID.user).document(user.getUid()).set(userMap, SetOptions.merge());
+                                        Toast.makeText(SignupActivity.this, "회원가입 완료", Toast.LENGTH_SHORT).show();
+                                        finish();
+                                    }
+                                } else {
+                                    Toast.makeText(SignupActivity.this, "회원가입 오류",
+                                            Toast.LENGTH_SHORT).show();
+                                }
                             }
-                        } else {
-                            Toast.makeText(SignupActivity.this, "Sign up error.",
-                                    Toast.LENGTH_SHORT).show();
-                        }
+                        });
+                break;
 
-                    }
-                });
+            case R.id.back:
+                startActivity(new Intent(this, LoginActivity.class));
+                break;
+        }
     }
 }
