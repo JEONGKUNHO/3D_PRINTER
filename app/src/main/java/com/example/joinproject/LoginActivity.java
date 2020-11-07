@@ -33,6 +33,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         findViewById(R.id.login_signup).setOnClickListener(this);
         findViewById(R.id.login_success).setOnClickListener(this);
+        findViewById(R.id.login_passwordReset).setOnClickListener(this);
     }
 
     @Override

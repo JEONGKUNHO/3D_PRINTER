@@ -2,7 +2,6 @@ package com.example.joinproject;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -83,7 +82,6 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                 }
             case R.id.back:
                 startActivity(new Intent(this, LoginActivity.class));
-                Log.e("das","굿굿");
                 break;
 
         }

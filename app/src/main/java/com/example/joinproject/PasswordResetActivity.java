@@ -37,6 +37,10 @@ public class PasswordResetActivity extends AppCompatActivity implements View.OnC
                             public void onComplete(@NonNull Task<Void> task) {
                                 if (task.isSuccessful()) {
                                     Toast.makeText  (PasswordResetActivity.this,"이메일을 보냈습니다.",Toast.LENGTH_SHORT).show();
+                                    finish();
+                                }
+                                else{
+                                    Toast.makeText(PasswordResetActivity.this,"이메일을 다시 입력해주세요.",Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });
