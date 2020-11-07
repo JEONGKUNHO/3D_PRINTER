@@ -2,6 +2,7 @@ package com.example.joinproject;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -25,7 +26,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
     private FirebaseAuth mAuth = FirebaseAuth.getInstance();
     private FirebaseFirestore mStore = FirebaseFirestore.getInstance();
 
-    private EditText mEmailText, mPasswordText;
+    private EditText mEmailText, mPasswordText , mPasswordText2;
 
 
     @Override
@@ -33,43 +34,60 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        mEmailText = findViewById(R.id.sign_email);
+        mEmailText = findViewById(R.id.password_email);
         mPasswordText = findViewById(R.id.sign_password);
+        mPasswordText2=findViewById(R.id.sign_password2);
 
-        findViewById(R.id.sign_success).setOnClickListener(this);
+        findViewById(R.id.send_button).setOnClickListener(this);
         findViewById(R.id.back).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.sign_success:
-                mAuth.createUserWithEmailAndPassword(mEmailText.getText().toString(), mPasswordText.getText().toString())
-                        .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if (task.isSuccessful()) {
-                                    FirebaseUser user = mAuth.getCurrentUser();
-                                    if (user != null) {
-                                        Map<String, Object> userMap = new HashMap<>();
-                                        userMap.put(FirebaseID.documentID, user.getUid());
-                                        userMap.put(FirebaseID.email, mEmailText.getText().toString());
-                                        userMap.put(FirebaseID.password, mPasswordText.getText().toString());
-                                        mStore.collection(FirebaseID.user).document(user.getUid()).set(userMap, SetOptions.merge());
-                                        Toast.makeText(SignupActivity.this, "회원가입 완료", Toast.LENGTH_SHORT).show();
-                                        finish();
-                                    }
-                                } else {
-                                    Toast.makeText(SignupActivity.this, "회원가입 오류",
-                                            Toast.LENGTH_SHORT).show();
-                                }
-                            }
-                        });
-                break;
 
+            case R.id.send_button:
+                String x=mEmailText.getText().toString();
+                String a=mPasswordText.getText().toString();
+                String b=mPasswordText2.getText().toString();
+                if(x.equals(null) || a.equals(null) || b.equals(null)){
+                    Toast.makeText(SignupActivity.this, "값을 입력하세요.",Toast.LENGTH_SHORT).show();
+                }
+                else if(!a.equals(b)){
+                    Toast.makeText(SignupActivity.this, "입력한 두 비밀번호가 다릅니다.", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    mAuth.createUserWithEmailAndPassword(mEmailText.getText().toString(), mPasswordText.getText().toString())
+                            .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if (task.isSuccessful()) {
+                                        FirebaseUser user = mAuth.getCurrentUser();
+
+                                        if (user != null) {
+                                            Map<String, Object> userMap = new HashMap<>();
+                                            userMap.put(FirebaseID.documentID, user.getUid());
+                                            userMap.put(FirebaseID.email, mEmailText.getText().toString());
+                                            userMap.put(FirebaseID.password, mPasswordText.getText().toString());
+                                            mStore.collection(FirebaseID.user).document(user.getUid()).set(userMap, SetOptions.merge());
+                                            Toast.makeText(SignupActivity.this, "회원가입 완료", Toast.LENGTH_SHORT).show();
+                                            finish();
+                                        }
+                                    } else {
+                                        Toast.makeText(SignupActivity.this, "회원가입 오류",
+                                                Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            });
+                    break;
+                }
             case R.id.back:
                 startActivity(new Intent(this, LoginActivity.class));
+                Log.e("das","굿굿");
                 break;
+
         }
+
+
     }
 }
