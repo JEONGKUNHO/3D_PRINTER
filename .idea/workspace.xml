@@ -13,9 +13,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d998412a-0f4e-4df6-b12e-5f7b3498c157" name="Default Changelist" comment="기업메인페이지 미완성">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d998412a-0f4e-4df6-b12e-5f7b3498c157" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -215,7 +213,21 @@
       <option name="project" value="LOCAL" />
       <updated>1605104665159</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="기업메인페이지 미완성">
+      <created>1605111189614</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1605111189614</updated>
+    </task>
+    <task id="LOCAL-00008" summary="기업메인페이지 미완성">
+      <created>1605111386858</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1605111386858</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -270,14 +282,14 @@
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
     <state x="434" y="269" key="AndroidCreateResourceFileDialog/0.0.1707.1027@0.0.1707.1027" timestamp="1605074919986" />
-    <state x="471" y="109" key="CommitChangelistDialog2" timestamp="1605104675463">
+    <state x="471" y="109" key="CommitChangelistDialog2" timestamp="1605111386201">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state x="471" y="109" key="CommitChangelistDialog2/0.0.1707.1027@0.0.1707.1027" timestamp="1605104675463" />
-    <state x="93" y="93" width="1521" height="841" key="DiffContextDialog" timestamp="1604562674557">
+    <state x="471" y="109" key="CommitChangelistDialog2/0.0.1707.1027@0.0.1707.1027" timestamp="1605111386201" />
+    <state x="93" y="93" width="1521" height="841" key="DiffContextDialog" timestamp="1605111374474">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state x="93" y="93" width="1521" height="841" key="DiffContextDialog/0.0.1707.1027@0.0.1707.1027" timestamp="1604562674557" />
+    <state x="93" y="93" width="1521" height="841" key="DiffContextDialog/0.0.1707.1027@0.0.1707.1027" timestamp="1605111374474" />
     <state x="634" y="255" key="FileChooserDialogImpl" timestamp="1604830349664">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
@@ -310,10 +322,10 @@
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
     <state x="576" y="255" width="558" height="524" key="StructurePopup/0.0.1707.1027@0.0.1707.1027" timestamp="1605079304535" />
-    <state x="446" y="247" key="Vcs.Push.Dialog.v2" timestamp="1605111155582">
+    <state x="446" y="247" key="Vcs.Push.Dialog.v2" timestamp="1605111496191">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state x="446" y="247" key="Vcs.Push.Dialog.v2/0.0.1707.1027@0.0.1707.1027" timestamp="1605111155582" />
+    <state x="446" y="247" key="Vcs.Push.Dialog.v2/0.0.1707.1027@0.0.1707.1027" timestamp="1605111496191" />
     <state x="93" y="93" width="1521" height="841" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1604478782695">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
