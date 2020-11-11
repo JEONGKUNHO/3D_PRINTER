@@ -1,94 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:id="@+id/toon">
-
-<LinearLayout
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".page_1">
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="20dp"
-        >
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:text="제품의뢰하기"
-        android:textStyle="bold"
-        android:textColor="@color/color_Toolbar"
-        android:layout_gravity="center"
-        android:textSize="50dp"
-        android:background="#b7dcfb"/>
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="인기 상품"
-        android:gravity="center"
-        android:textSize="15dp"
-        android:layout_marginBottom="10dp"
-        />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:orientation="horizontal"
-        android:gravity="center">
-
-       <ImageButton
-           android:layout_width="200dp"
-           android:layout_height="200dp">
-       </ImageButton>
-
-       <ImageButton
-           android:layout_width="200dp"
-           android:layout_height="200dp">
-       </ImageButton>
-     </LinearLayout>
+    android:layout_gravity="center"
+    android:id="@+id/toon">
 
     <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:orientation="horizontal"
-        android:gravity="center">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".page_1">
 
-        <ImageButton
-            android:layout_width="200dp"
-            android:layout_height="200dp">
-        </ImageButton>
 
-        <ImageButton
-            android:layout_width="200dp"
-            android:layout_height="200dp">
-        </ImageButton>
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
+            >
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:text="제품의뢰하기"
+                android:textStyle="bold"
+                android:textColor="@color/color_Toolbar"
+                android:layout_gravity="center"
+                android:textSize="50dp"
+                android:background="#b7dcfb"/>
+        </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:orientation="horizontal"
-        android:gravity="center">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="인기 상품"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:layout_marginBottom="10dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="horizontal"
+            android:gravity="center">
 
-        <ImageButton
+            <ImageButton
                 android:layout_width="200dp"
                 android:layout_height="200dp">
-        </ImageButton>
+            </ImageButton>
 
-        <ImageButton
+            <ImageButton
                 android:layout_width="200dp"
                 android:layout_height="200dp">
-        </ImageButton>
-      </LinearLayout>
+            </ImageButton>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageButton
+                android:layout_width="200dp"
+                android:layout_height="200dp">
+            </ImageButton>
+
+            <ImageButton
+                android:layout_width="200dp"
+                android:layout_height="200dp">
+            </ImageButton>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageButton
+                android:layout_width="200dp"
+                android:layout_height="200dp">
+            </ImageButton>
+
+            <ImageButton
+                android:layout_width="200dp"
+                android:layout_height="200dp">
+            </ImageButton>
+        </LinearLayout>
 
 
     </LinearLayout>
