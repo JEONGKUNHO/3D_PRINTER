@@ -27,9 +27,8 @@
         android:id="@+id/tab"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabSelectedTextColor="@color/color_Toolbar"
         app:tabIndicatorColor="@color/color_Toolbar"
-        >
+        app:tabSelectedTextColor="@color/color_Toolbar">
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tab_Item1"
