@@ -1,6 +1,7 @@
 package com.example.joinproject;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -57,6 +58,15 @@ public class CompanyAdapter extends RecyclerView.Adapter<CompanyAdapter.CompanyV
             this.comp_image=itemView.findViewById(R.id.comp_image);
             this.comp_name=itemView.findViewById(R.id.comp_name);
             this.comp_star=itemView.findViewById(R.id.comp_star);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    {
+                        Intent intent=new Intent(v.getContext(), CompanyMain.class);
+                        v.getContext().startActivity(intent);
+                    }
+                }
+            });
         }
     }
 }
