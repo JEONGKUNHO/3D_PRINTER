@@ -22,12 +22,12 @@ import java.util.ArrayList;
 
 public class page_4 extends Fragment {
 
-    private RecyclerView recyclerView;
-    private RecyclerView.Adapter adapter;
-    private RecyclerView.LayoutManager layoutManager;
-    private ArrayList<Company> arrayList;
-    private FirebaseDatabase database;
-    private DatabaseReference databaseReference;
+        private RecyclerView recyclerView;
+        private RecyclerView.Adapter adapter;
+        private RecyclerView.LayoutManager layoutManager;
+        private ArrayList<Company> arrayList;
+        private FirebaseDatabase database;
+        private DatabaseReference databaseReference;
 
     @Nullable
     @Override
@@ -74,7 +74,3 @@ public class page_4 extends Fragment {
         super.onViewCreated(view, savedInstanceState);
     }
 }
-
-
-
-

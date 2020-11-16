@@ -83,7 +83,6 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
             case R.id.back:
                 startActivity(new Intent(this, LoginActivity.class));
                 break;
-
         }
 
 

@@ -14,7 +14,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="만드러조"
+            android:text="MakeUs"
             android:textColor="@color/color_White"
             android:textSize="25dp"
             android:gravity="center"

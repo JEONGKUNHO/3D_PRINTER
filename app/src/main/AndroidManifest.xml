@@ -20,6 +20,11 @@
         </activity>
         <activity android:name=".PasswordResetActivity" />
         <activity android:name=".CompanyMain"></activity>
+        <activity android:name=".CompanyMenu"></activity>
+        <activity android:name=".companyIntro"></activity>
+        <activity android:name=".companyGallery"></activity>
+        <activity android:name=".companyReview"></activity>
+        <activity android:name=".plusReview"></activity>
     </application>
 
 </manifest>
