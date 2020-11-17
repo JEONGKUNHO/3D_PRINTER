@@ -26,6 +26,11 @@ import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+
 public class WritePostActivity extends BasicActivity {
 
     private static int PICK_IMAGE_REQUEST = 1;
@@ -112,8 +117,12 @@ public class WritePostActivity extends BasicActivity {
                 fileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                     @Override
                     public void onSuccess(Uri uri) {
+
+                        Date currentTime = Calendar.getInstance().getTime();
+                        String date = new SimpleDateFormat("yyyy년 MM월 dd일 EE요일", Locale.getDefault()).format(currentTime);
+
                         DatabaseReference database = FirebaseDatabase.getInstance().getReference();
-                        Board board = new Board(editText.getText().toString(), editText2.getText().toString(),uri.toString(),mauth.getUid());
+                        Board board = new Board(editText.getText().toString(), editText2.getText().toString(),uri.toString(),mauth.getUid(),date);
                         database.child("Board").push().setValue(board);
                         Toast.makeText(WritePostActivity.this, "업로드 성공.", Toast.LENGTH_SHORT).show();
                         finish();

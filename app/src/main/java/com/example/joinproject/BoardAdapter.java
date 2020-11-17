@@ -39,6 +39,7 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.BoardViewHol
                 .into(holder.image);
         holder.title.setText(arrayList.get(position).getTitle());
         holder.content.setText(arrayList.get(position).getContent());
+        holder.date.setText(arrayList.get(position).getDate());
     }
 
     @Override
@@ -50,12 +51,14 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.BoardViewHol
         ImageView image;
         TextView title;
         TextView content;
+        TextView date;
 
 
         public BoardViewHolder(@NonNull final View itemView) {
             super(itemView);
             this.image=itemView.findViewById(R.id.Board_image);
             this.title=itemView.findViewById(R.id.Board_title);
+            this.date=itemView.findViewById(R.id.Board_date);
             this.content=itemView.findViewById(R.id.Board_content);
         }
     }

@@ -40,6 +40,7 @@
                 android:layout_margin="5dp"
                 android:text="평점" />
 
+
         </LinearLayout>
 
     </LinearLayout>

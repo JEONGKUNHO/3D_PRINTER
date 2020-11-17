@@ -40,6 +40,7 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ReviewView
                 .into(holder.image);
         holder.title.setText(arrayList.get(position).getTitle());
         holder.content.setText(arrayList.get(position).getContent());
+        holder.date.setText(arrayList.get(position).getDate());
     }
 
     @Override
@@ -52,6 +53,7 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ReviewView
         ImageView image;
         TextView title;
         TextView content;
+        TextView date;
 
 
         public ReviewViewHolder(@NonNull final View itemView) {
@@ -59,6 +61,7 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ReviewView
             this.image=itemView.findViewById(R.id.Review_image);
             this.title=itemView.findViewById(R.id.Review_title);
             this.content=itemView.findViewById(R.id.Review_content);
+            this.date=itemView.findViewById(R.id.Review_date);
             this.button=itemView.findViewById(R.id.plusReview);
         }
     }
