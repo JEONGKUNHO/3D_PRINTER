@@ -13,7 +13,16 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d998412a-0f4e-4df6-b12e-5f7b3498c157" name="Default Changelist" comment="" />
+    <list default="true" id="d998412a-0f4e-4df6-b12e-5f7b3498c157" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,16 +91,16 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\sooo\AndroidStudioProjects\3D_PRINTER\app\src\main\res\layout" />
-      <recent name="C:\Users\dghj6\AndroidStudioProjects\joinProject\app\src\main\res\layout" />
-      <recent name="C:\Users\dghj6\AndroidStudioProjects\joinProject\app" />
-    </key>
     <key name="android.template.-960888517">
       <recent name="com.example.joinproject" />
     </key>
     <key name="android.template.1015805955">
       <recent name="com.example.joinproject" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sooo\AndroidStudioProjects\3D_PRINTER\app\src\main\res\layout" />
+      <recent name="C:\Users\dghj6\AndroidStudioProjects\joinProject\app\src\main\res\layout" />
+      <recent name="C:\Users\dghj6\AndroidStudioProjects\joinProject\app" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.joinproject" />
@@ -344,22 +353,22 @@
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
     <state x="723" y="404" key="Github.ShareDialog/0.0.1707.1027@0.0.1707.1027" timestamp="1603373238843" />
-    <state width="829" height="280" key="GridCell.Tab.0.bottom" timestamp="1605628125062">
+    <state width="829" height="280" key="GridCell.Tab.0.bottom" timestamp="1605631922774">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state width="829" height="280" key="GridCell.Tab.0.bottom/0.0.1707.1027@0.0.1707.1027" timestamp="1605628125062" />
-    <state width="829" height="280" key="GridCell.Tab.0.center" timestamp="1605628125062">
+    <state width="829" height="280" key="GridCell.Tab.0.bottom/0.0.1707.1027@0.0.1707.1027" timestamp="1605631922774" />
+    <state width="829" height="280" key="GridCell.Tab.0.center" timestamp="1605631922774">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state width="829" height="280" key="GridCell.Tab.0.center/0.0.1707.1027@0.0.1707.1027" timestamp="1605628125062" />
-    <state width="829" height="280" key="GridCell.Tab.0.left" timestamp="1605628125062">
+    <state width="829" height="280" key="GridCell.Tab.0.center/0.0.1707.1027@0.0.1707.1027" timestamp="1605631922774" />
+    <state width="829" height="280" key="GridCell.Tab.0.left" timestamp="1605631922774">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state width="829" height="280" key="GridCell.Tab.0.left/0.0.1707.1027@0.0.1707.1027" timestamp="1605628125062" />
-    <state width="829" height="280" key="GridCell.Tab.0.right" timestamp="1605628125062">
+    <state width="829" height="280" key="GridCell.Tab.0.left/0.0.1707.1027@0.0.1707.1027" timestamp="1605631922774" />
+    <state width="829" height="280" key="GridCell.Tab.0.right" timestamp="1605631922774">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state width="829" height="280" key="GridCell.Tab.0.right/0.0.1707.1027@0.0.1707.1027" timestamp="1605628125062" />
+    <state width="829" height="280" key="GridCell.Tab.0.right/0.0.1707.1027@0.0.1707.1027" timestamp="1605631922774" />
     <state x="355" y="156" key="SettingsEditor" timestamp="1603384779602">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
