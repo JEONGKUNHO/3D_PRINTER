@@ -66,7 +66,6 @@ public class page_4 extends Fragment {
         adapter = new CompanyAdapter(arrayList, getActivity());
         recyclerView.setAdapter(adapter);
 
-
         return v;
     }
     @Override

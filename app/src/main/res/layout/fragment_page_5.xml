@@ -8,10 +8,10 @@
     tools:context=".page_5">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <Button
+        android:id="@+id/logout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Page_5"
-        android:textSize="100dp"/>
+        android:layout_height="wrap_content"
+        android:text="로그아웃" />
 
 </LinearLayout>

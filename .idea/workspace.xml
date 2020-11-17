@@ -6,7 +6,8 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="asd" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="AutoImportSettings">
@@ -14,26 +15,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d998412a-0f4e-4df6-b12e-5f7b3498c157" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/CompanyMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/Gallery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/GalleryAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/GalleryDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/GalleryItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/Review.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/ReviewAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/ReviewItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/companyGallery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/companyIntro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/companyReview.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/plusReview.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/company_gallery.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/company_gallery_detail.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/company_intro.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/company_menu.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/company_review.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/gallery_item.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/review_item.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/review_plus.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/BasicActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/Board.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/BoardAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/BoardItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/WritePostActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_write_post.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/board_item.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
@@ -44,18 +32,17 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/CompanyAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/CompanyAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/CompanyItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/CompanyItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/SignupActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/SignupActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/company1.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/company1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/page_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/page_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/page_3.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/page_3.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/page_4.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/page_4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/company_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/company_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_company1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_company1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/page_5.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/page_5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/plusReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/plusReview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_page_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_page_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_page_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_page_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_page_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_page_5.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,8 +78,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="resourceFile" />
-        <option value="Class" />
         <option value="layoutResourceFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -113,8 +100,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="2231924b07037ece" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-11-16T02:43:10.790Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Nexus_5X_API_30" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-11-17T01:15:52.897Z" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -295,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605145679714</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="20201116">
+      <created>1605507617934</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1605507617934</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -317,7 +311,8 @@
     <MESSAGE value="기업메인페이지 미완성" />
     <MESSAGE value="기업메인페이지 미완성2" />
     <MESSAGE value="기업버튼성공!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="기업버튼성공!!!" />
+    <MESSAGE value="20201116" />
+    <option name="LAST_COMMIT_MESSAGE" value="20201116" />
   </component>
   <component name="WindowStateProjectService">
     <state x="572" y="158" key="#app" timestamp="1604799053667">
@@ -332,10 +327,10 @@
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
     <state x="601" y="349" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1707.1027@0.0.1707.1027" timestamp="1604891360205" />
-    <state x="659" y="223" key="#com.intellij.ide.util.MemberChooser" timestamp="1605506244797">
+    <state x="659" y="223" key="#com.intellij.ide.util.MemberChooser" timestamp="1605616241621">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state x="659" y="223" key="#com.intellij.ide.util.MemberChooser/0.0.1707.1027@0.0.1707.1027" timestamp="1605506244797" />
+    <state x="659" y="223" key="#com.intellij.ide.util.MemberChooser/0.0.1707.1027@0.0.1707.1027" timestamp="1605616241621" />
     <state x="534" y="249" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1605415538768">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
@@ -356,14 +351,14 @@
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
     <state x="93" y="93" width="1521" height="841" key="AVDManager/0.0.1707.1027@0.0.1707.1027" timestamp="1604910280971" />
-    <state x="434" y="269" key="AndroidCreateResourceFileDialog" timestamp="1605506450364">
+    <state x="434" y="269" key="AndroidCreateResourceFileDialog" timestamp="1605621325309">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state x="434" y="269" key="AndroidCreateResourceFileDialog/0.0.1707.1027@0.0.1707.1027" timestamp="1605506450364" />
-    <state x="471" y="109" key="CommitChangelistDialog2" timestamp="1605145678494">
+    <state x="434" y="269" key="AndroidCreateResourceFileDialog/0.0.1707.1027@0.0.1707.1027" timestamp="1605621325309" />
+    <state x="471" y="109" key="CommitChangelistDialog2" timestamp="1605507616459">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state x="471" y="109" key="CommitChangelistDialog2/0.0.1707.1027@0.0.1707.1027" timestamp="1605145678494" />
+    <state x="471" y="109" key="CommitChangelistDialog2/0.0.1707.1027@0.0.1707.1027" timestamp="1605507616459" />
     <state x="93" y="93" width="1521" height="841" key="DiffContextDialog" timestamp="1605144865029">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
@@ -376,22 +371,22 @@
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
     <state x="723" y="404" key="Github.ShareDialog/0.0.1707.1027@0.0.1707.1027" timestamp="1603373238843" />
-    <state width="1662" height="127" key="GridCell.Tab.0.bottom" timestamp="1605495776624">
+    <state width="1662" height="212" key="GridCell.Tab.0.bottom" timestamp="1605624341663">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state width="1662" height="127" key="GridCell.Tab.0.bottom/0.0.1707.1027@0.0.1707.1027" timestamp="1605495776624" />
-    <state width="1662" height="127" key="GridCell.Tab.0.center" timestamp="1605495776624">
+    <state width="1662" height="212" key="GridCell.Tab.0.bottom/0.0.1707.1027@0.0.1707.1027" timestamp="1605624341663" />
+    <state width="1662" height="212" key="GridCell.Tab.0.center" timestamp="1605624341663">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state width="1662" height="127" key="GridCell.Tab.0.center/0.0.1707.1027@0.0.1707.1027" timestamp="1605495776624" />
-    <state width="1662" height="127" key="GridCell.Tab.0.left" timestamp="1605495776624">
+    <state width="1662" height="212" key="GridCell.Tab.0.center/0.0.1707.1027@0.0.1707.1027" timestamp="1605624341663" />
+    <state width="1662" height="212" key="GridCell.Tab.0.left" timestamp="1605624341663">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state width="1662" height="127" key="GridCell.Tab.0.left/0.0.1707.1027@0.0.1707.1027" timestamp="1605495776624" />
-    <state width="1662" height="127" key="GridCell.Tab.0.right" timestamp="1605495776624">
+    <state width="1662" height="212" key="GridCell.Tab.0.left/0.0.1707.1027@0.0.1707.1027" timestamp="1605624341663" />
+    <state width="1662" height="212" key="GridCell.Tab.0.right" timestamp="1605624341663">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state width="1662" height="127" key="GridCell.Tab.0.right/0.0.1707.1027@0.0.1707.1027" timestamp="1605495776624" />
+    <state width="1662" height="212" key="GridCell.Tab.0.right/0.0.1707.1027@0.0.1707.1027" timestamp="1605624341663" />
     <state x="355" y="156" key="SettingsEditor" timestamp="1603384779602">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
@@ -400,10 +395,10 @@
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
     <state x="576" y="255" width="558" height="524" key="StructurePopup/0.0.1707.1027@0.0.1707.1027" timestamp="1605079304535" />
-    <state x="446" y="247" key="Vcs.Push.Dialog.v2" timestamp="1605145742823">
+    <state x="446" y="247" key="Vcs.Push.Dialog.v2" timestamp="1605507623267">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state x="446" y="247" key="Vcs.Push.Dialog.v2/0.0.1707.1027@0.0.1707.1027" timestamp="1605145742823" />
+    <state x="446" y="247" key="Vcs.Push.Dialog.v2/0.0.1707.1027@0.0.1707.1027" timestamp="1605507623267" />
     <state x="93" y="93" width="1521" height="841" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1604478782695">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
@@ -416,9 +411,9 @@
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
     <state x="557" y="305" key="git4idea.merge.GitPullDialog/0.0.1707.1027@0.0.1707.1027" timestamp="1605145108398" />
-    <state x="516" y="222" key="search.everywhere.popup" timestamp="1605270913978">
+    <state x="516" y="222" width="672" height="678" key="search.everywhere.popup" timestamp="1605577981558">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state x="516" y="222" key="search.everywhere.popup/0.0.1707.1027@0.0.1707.1027" timestamp="1605270913978" />
+    <state x="516" y="222" width="672" height="678" key="search.everywhere.popup/0.0.1707.1027@0.0.1707.1027" timestamp="1605577981558" />
   </component>
 </project>

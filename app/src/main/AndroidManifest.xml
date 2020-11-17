@@ -25,6 +25,9 @@
         <activity android:name=".companyGallery"></activity>
         <activity android:name=".companyReview"></activity>
         <activity android:name=".plusReview"></activity>
+        <activity android:name=".BasicActivity"></activity>
+        <activity android:name=".WritePostActivity"></activity>
+
     </application>
 
 </manifest>
