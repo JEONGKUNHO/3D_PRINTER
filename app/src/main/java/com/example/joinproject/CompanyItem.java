@@ -11,7 +11,6 @@ public class CompanyItem extends AppCompatActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.company_item);
 
-        findViewById(R.id.toCompany).setOnClickListener(this);
     }
 
     @Override

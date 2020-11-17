@@ -53,7 +53,7 @@ public class CompanyAdapter extends RecyclerView.Adapter<CompanyAdapter.CompanyV
         TextView comp_star;
 
 
-        public CompanyViewHolder(@NonNull View itemView) {
+        public CompanyViewHolder(@NonNull final View itemView) {
             super(itemView);
             this.comp_image=itemView.findViewById(R.id.comp_image);
             this.comp_name=itemView.findViewById(R.id.comp_name);
@@ -62,8 +62,10 @@ public class CompanyAdapter extends RecyclerView.Adapter<CompanyAdapter.CompanyV
                 @Override
                 public void onClick(View v) {
                     {
-                        Intent intent=new Intent(v.getContext(), CompanyMain.class);
-                        v.getContext().startActivity(intent);
+                        if(getAdapterPosition()==0) {
+                            Intent intent = new Intent(v.getContext(), CompanyMenu.class);
+                            v.getContext().startActivity(intent);
+                        }
                     }
                 }
             });
