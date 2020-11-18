@@ -1,10 +1,12 @@
 package com.example.joinproject;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -33,12 +35,24 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.GalleryV
     }
 
     @Override
-    public void onBindViewHolder(@NonNull GalleryViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull GalleryViewHolder holder, final int position) {
         Glide.with(holder.itemView)
                 .load(arrayList.get(position).getImage())
                 .into(holder.image);
         holder.title.setText(arrayList.get(position).getTitle());
         holder.content.setText(arrayList.get(position).getContent());
+        holder.linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(v.getContext(),GalleryDetail.class);
+                intent.putExtra("gallery_title", arrayList.get(position).getTitle());
+                intent.putExtra("gallery_content", arrayList.get(position).getContent());
+                intent.putExtra("gallery_image", arrayList.get(position).getImage());
+                v.getContext().startActivity(intent);
+
+            }
+        });
+
     }
 
     @Override
@@ -50,13 +64,14 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.GalleryV
         ImageView image;
         TextView title;
         TextView content;
-
+        LinearLayout linearLayout;
 
         public GalleryViewHolder(@NonNull final View itemView) {
             super(itemView);
             this.image=itemView.findViewById(R.id.Gallery_image);
             this.title=itemView.findViewById(R.id.Gallery_title);
             this.content=itemView.findViewById(R.id.Gallery_content);
+            this.linearLayout=itemView.findViewById(R.id.toGallery);
         }
     }
 }

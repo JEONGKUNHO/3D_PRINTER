@@ -5,7 +5,7 @@
     android:layout_height="wrap_content">
 
     <LinearLayout
-        android:id="@+id/toCompany"
+        android:id="@+id/toBoardDetail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/round_border"

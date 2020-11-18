@@ -14,6 +14,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d998412a-0f4e-4df6-b12e-5f7b3498c157" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/BoardDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/ReviewDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/board_detail.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/review_detail.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
@@ -24,16 +28,19 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/BoardAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/BoardAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/GalleryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/GalleryAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/GalleryDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/GalleryDetail.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/Review.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/ReviewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/ReviewAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/WritePostActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/WritePostActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/plusReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/joinproject/plusReview.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/board_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/board_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/company_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/company_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/company_gallery_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/company_gallery_detail.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/review_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/review_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +50,7 @@
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[R5CN3173VGA]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[2231924b07037ece]" />
   <component name="ExportToHTMLSettings">
     <option name="printScope" value="4" />
     <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../joinProject\exportToHTML" />
@@ -103,16 +110,17 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dghj6\AndroidStudioProjects\3D_PRINTER_3\app\src\main\res\layout" />
+      <recent name="C:\Users\sooo\AndroidStudioProjects\3D_PRINTER\app\src\main\res\layout" />
+      <recent name="C:\Users\dghj6\AndroidStudioProjects\joinProject\app\src\main\res\layout" />
+      <recent name="C:\Users\dghj6\AndroidStudioProjects\joinProject\app" />
+    </key>
     <key name="android.template.-960888517">
       <recent name="com.example.joinproject" />
     </key>
     <key name="android.template.1015805955">
       <recent name="com.example.joinproject" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\sooo\AndroidStudioProjects\3D_PRINTER\app\src\main\res\layout" />
-      <recent name="C:\Users\dghj6\AndroidStudioProjects\joinProject\app\src\main\res\layout" />
-      <recent name="C:\Users\dghj6\AndroidStudioProjects\joinProject\app" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.joinproject" />
@@ -329,10 +337,10 @@
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
     <state x="601" y="349" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1707.1027@0.0.1707.1027" timestamp="1604891360205" />
-    <state x="659" y="223" key="#com.intellij.ide.util.MemberChooser" timestamp="1605194409156">
+    <state x="659" y="223" key="#com.intellij.ide.util.MemberChooser" timestamp="1605675257600">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state x="659" y="223" key="#com.intellij.ide.util.MemberChooser/0.0.1707.1027@0.0.1707.1027" timestamp="1605194409156" />
+    <state x="659" y="223" key="#com.intellij.ide.util.MemberChooser/0.0.1707.1027@0.0.1707.1027" timestamp="1605675257600" />
     <state x="534" y="249" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1605071908435">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
@@ -349,10 +357,10 @@
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
     <state x="93" y="93" width="1521" height="841" key="AVDManager/0.0.1707.1027@0.0.1707.1027" timestamp="1604910280971" />
-    <state x="434" y="269" key="AndroidCreateResourceFileDialog" timestamp="1605621036955">
+    <state x="434" y="269" key="AndroidCreateResourceFileDialog" timestamp="1605674763816">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state x="434" y="269" key="AndroidCreateResourceFileDialog/0.0.1707.1027@0.0.1707.1027" timestamp="1605621036955" />
+    <state x="434" y="269" key="AndroidCreateResourceFileDialog/0.0.1707.1027@0.0.1707.1027" timestamp="1605674763816" />
     <state x="694" y="299" key="AndroidCreateXmlResourceDialog" timestamp="1605230362078">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
@@ -373,22 +381,22 @@
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
     <state x="723" y="404" key="Github.ShareDialog/0.0.1707.1027@0.0.1707.1027" timestamp="1603373238843" />
-    <state width="829" height="280" key="GridCell.Tab.0.bottom" timestamp="1605631922774">
+    <state width="1662" height="81" key="GridCell.Tab.0.bottom" timestamp="1605680598776">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state width="829" height="280" key="GridCell.Tab.0.bottom/0.0.1707.1027@0.0.1707.1027" timestamp="1605631922774" />
-    <state width="829" height="280" key="GridCell.Tab.0.center" timestamp="1605631922774">
+    <state width="1662" height="81" key="GridCell.Tab.0.bottom/0.0.1707.1027@0.0.1707.1027" timestamp="1605680598776" />
+    <state width="1662" height="81" key="GridCell.Tab.0.center" timestamp="1605680598776">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state width="829" height="280" key="GridCell.Tab.0.center/0.0.1707.1027@0.0.1707.1027" timestamp="1605631922774" />
-    <state width="829" height="280" key="GridCell.Tab.0.left" timestamp="1605631922774">
+    <state width="1662" height="81" key="GridCell.Tab.0.center/0.0.1707.1027@0.0.1707.1027" timestamp="1605680598776" />
+    <state width="1662" height="81" key="GridCell.Tab.0.left" timestamp="1605680598776">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state width="829" height="280" key="GridCell.Tab.0.left/0.0.1707.1027@0.0.1707.1027" timestamp="1605631922774" />
-    <state width="829" height="280" key="GridCell.Tab.0.right" timestamp="1605631922774">
+    <state width="1662" height="81" key="GridCell.Tab.0.left/0.0.1707.1027@0.0.1707.1027" timestamp="1605680598776" />
+    <state width="1662" height="81" key="GridCell.Tab.0.right" timestamp="1605680598776">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state width="829" height="280" key="GridCell.Tab.0.right/0.0.1707.1027@0.0.1707.1027" timestamp="1605631922774" />
+    <state width="1662" height="81" key="GridCell.Tab.0.right/0.0.1707.1027@0.0.1707.1027" timestamp="1605680598776" />
     <state x="355" y="156" key="SettingsEditor" timestamp="1603384779602">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
@@ -409,6 +417,10 @@
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
     <state x="93" y="93" width="1521" height="841" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1707.1027@0.0.1707.1027" timestamp="1604478782695" />
+    <state x="427" y="116" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1605682352856">
+      <screen x="0" y="0" width="1707" height="1027" />
+    </state>
+    <state x="427" y="116" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1707.1027@0.0.1707.1027" timestamp="1605682352856" />
     <state x="657" y="431" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605146044639">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>

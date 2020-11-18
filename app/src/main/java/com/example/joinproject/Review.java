@@ -48,6 +48,7 @@ public class Review {
     public void setWriter(String writer) {
         this.writer = writer;
     }
+
     public String getDate() {
         return date;
     }

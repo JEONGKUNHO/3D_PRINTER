@@ -1,10 +1,12 @@
 package com.example.joinproject;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -33,13 +35,25 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.BoardViewHol
     }
 
     @Override
-    public void onBindViewHolder(@NonNull BoardViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull BoardViewHolder holder, final int position) {
         Glide.with(holder.itemView)
                 .load(arrayList.get(position).getImageUrl())
                 .into(holder.image);
         holder.title.setText(arrayList.get(position).getTitle());
         holder.content.setText(arrayList.get(position).getContent());
         holder.date.setText(arrayList.get(position).getDate());
+        holder.linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(v.getContext(),BoardDetail.class);
+                intent.putExtra("board_title", arrayList.get(position).getTitle());
+                intent.putExtra("board_content", arrayList.get(position).getContent());
+                intent.putExtra("board_date", arrayList.get(position).getDate());
+                intent.putExtra("board_image", arrayList.get(position).getImageUrl());
+                v.getContext().startActivity(intent);
+
+            }
+        });
     }
 
     @Override
@@ -52,6 +66,7 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.BoardViewHol
         TextView title;
         TextView content;
         TextView date;
+        LinearLayout linearLayout;
 
 
         public BoardViewHolder(@NonNull final View itemView) {
@@ -60,6 +75,7 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.BoardViewHol
             this.title=itemView.findViewById(R.id.Board_title);
             this.date=itemView.findViewById(R.id.Board_date);
             this.content=itemView.findViewById(R.id.Board_content);
+            this.linearLayout=itemView.findViewById(R.id.toBoardDetail);
         }
     }
 }

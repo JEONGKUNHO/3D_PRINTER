@@ -5,7 +5,7 @@
     android:layout_height="wrap_content">
 
     <LinearLayout
-        android:id="@+id/toReview"
+        android:id="@+id/toReviewDetail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/round_border"
@@ -39,7 +39,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_marginTop="2dp"
-                android:text="내용" />
+                android:text="내용"
+                android:visibility="visible" />
 
             <TextView
                 android:id="@+id/Review_date"
