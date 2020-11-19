@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -41,6 +42,7 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.BoardViewHol
                 .into(holder.image);
         holder.title.setText(arrayList.get(position).getTitle());
         holder.content.setText(arrayList.get(position).getContent());
+        holder.writer.setText(arrayList.get(position).getWriter());
         holder.date.setText(arrayList.get(position).getDate());
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +51,7 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.BoardViewHol
                 intent.putExtra("board_title", arrayList.get(position).getTitle());
                 intent.putExtra("board_content", arrayList.get(position).getContent());
                 intent.putExtra("board_date", arrayList.get(position).getDate());
+                intent.putExtra("board_writer", arrayList.get(position).getWriter());
                 intent.putExtra("board_image", arrayList.get(position).getImageUrl());
                 v.getContext().startActivity(intent);
 
@@ -66,6 +69,10 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.BoardViewHol
         TextView title;
         TextView content;
         TextView date;
+        TextView writer;
+        Button complete;
+        Button delete;
+        Button modify;
         LinearLayout linearLayout;
 
 
@@ -75,7 +82,11 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.BoardViewHol
             this.title=itemView.findViewById(R.id.Board_title);
             this.date=itemView.findViewById(R.id.Board_date);
             this.content=itemView.findViewById(R.id.Board_content);
+            this.writer=itemView.findViewById(R.id.Board_writer);
             this.linearLayout=itemView.findViewById(R.id.toBoardDetail);
+            this.delete = itemView.findViewById(R.id.delete);
+            this.modify = itemView.findViewById(R.id.modify);
+            this.complete=itemView.findViewById(R.id.complete);
         }
     }
 }

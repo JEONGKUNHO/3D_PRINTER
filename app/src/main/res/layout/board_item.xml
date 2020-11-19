@@ -42,6 +42,14 @@
                 android:text="내용" />
 
             <TextView
+                android:id="@+id/Board_writer"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:text="글쓴이"
+                android:visibility="gone" />
+
+            <TextView
                 android:id="@+id/Board_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

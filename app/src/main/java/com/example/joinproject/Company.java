@@ -8,8 +8,14 @@ public class Company {
     private int comp_star;
     private String comp_image;
     private String comp_intro;
+    private String comp_bossId;
+
+
 
     public Company(){}
+    public String getComp_bossId() { return comp_bossId; }
+
+    public void setComp_bossId(String comp_bossId) { this.comp_bossId = comp_bossId;  }
 
     public int getComp_num() {
         return comp_num;

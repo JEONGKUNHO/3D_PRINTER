@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -34,12 +35,22 @@ public class CompanyAdapter extends RecyclerView.Adapter<CompanyAdapter.CompanyV
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CompanyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull CompanyViewHolder holder, final int position) {
         Glide.with(holder.itemView)
                 .load(arrayList.get(position).getComp_image())
                 .into(holder.comp_image);
         holder.comp_name.setText(arrayList.get(position).getComp_name());
         holder.comp_star.setText(String.valueOf(arrayList.get(position).getComp_star()));
+        holder.comp_bossId.setText(arrayList.get(position).getComp_bossId());
+        holder.linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), CompanyMenu.class);
+                intent.putExtra("comp_bossId", arrayList.get(position).getComp_bossId());
+                intent.putExtra("comp_name",arrayList.get(position).getComp_name());
+                v.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -51,24 +62,16 @@ public class CompanyAdapter extends RecyclerView.Adapter<CompanyAdapter.CompanyV
         ImageView comp_image;
         TextView comp_name;
         TextView comp_star;
-
-
+        TextView comp_bossId;
+        LinearLayout linearLayout;
         public CompanyViewHolder(@NonNull final View itemView) {
             super(itemView);
             this.comp_image=itemView.findViewById(R.id.comp_image);
             this.comp_name=itemView.findViewById(R.id.comp_name);
             this.comp_star=itemView.findViewById(R.id.comp_star);
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    {
-                        if(getAdapterPosition()==0) {
-                            Intent intent = new Intent(v.getContext(), CompanyMenu.class);
-                            v.getContext().startActivity(intent);
-                        }
-                    }
-                }
-            });
+            this.comp_bossId=itemView.findViewById(R.id.comp_bossid);
+            this.linearLayout=itemView.findViewById(R.id.toCompany);
+
         }
     }
 }
