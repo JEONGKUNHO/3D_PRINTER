@@ -126,6 +126,7 @@ public class WritePostActivity extends BasicActivity {
                         database.child("Board").push().setValue(board);
                         Toast.makeText(WritePostActivity.this, "업로드 성공.", Toast.LENGTH_SHORT).show();
                         finish();
+
                     }
                 });
             }

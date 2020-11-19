@@ -42,12 +42,15 @@ public class CompanyAdapter extends RecyclerView.Adapter<CompanyAdapter.CompanyV
         holder.comp_name.setText(arrayList.get(position).getComp_name());
         holder.comp_star.setText(String.valueOf(arrayList.get(position).getComp_star()));
         holder.comp_bossId.setText(arrayList.get(position).getComp_bossId());
+        holder.comp_intro.setText(arrayList.get(position).getComp_intro());
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), CompanyMenu.class);
                 intent.putExtra("comp_bossId", arrayList.get(position).getComp_bossId());
                 intent.putExtra("comp_name",arrayList.get(position).getComp_name());
+                intent.putExtra("comp_intro",arrayList.get(position).getComp_intro());
+                intent.putExtra("comp_image",arrayList.get(position).getComp_image());
                 v.getContext().startActivity(intent);
             }
         });
@@ -63,6 +66,7 @@ public class CompanyAdapter extends RecyclerView.Adapter<CompanyAdapter.CompanyV
         TextView comp_name;
         TextView comp_star;
         TextView comp_bossId;
+        TextView comp_intro;
         LinearLayout linearLayout;
         public CompanyViewHolder(@NonNull final View itemView) {
             super(itemView);
@@ -70,6 +74,7 @@ public class CompanyAdapter extends RecyclerView.Adapter<CompanyAdapter.CompanyV
             this.comp_name=itemView.findViewById(R.id.comp_name);
             this.comp_star=itemView.findViewById(R.id.comp_star);
             this.comp_bossId=itemView.findViewById(R.id.comp_bossid);
+            this.comp_intro=itemView.findViewById(R.id.comp_intro);
             this.linearLayout=itemView.findViewById(R.id.toCompany);
 
         }

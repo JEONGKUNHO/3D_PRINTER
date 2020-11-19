@@ -9,6 +9,7 @@ import com.google.android.material.tabs.TabLayout;
 
 public class CompanyMain extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,5 +22,7 @@ public class CompanyMain extends AppCompatActivity {
         TabLayout tab = findViewById(R.id.tab);
         tab.setupWithViewPager(vp);
 
+
     }
+
 }

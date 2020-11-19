@@ -17,6 +17,7 @@ public class Review {
         this.date=date;
     }
 
+
     public String getTitle() {
         return title;
     }

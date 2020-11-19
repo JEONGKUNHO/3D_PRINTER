@@ -42,6 +42,15 @@
                 android:visibility="gone" />
 
             <TextView
+                android:id="@+id/comp_intro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="intro"
+                android:visibility="gone" />
+
+
+            <TextView
                 android:id="@+id/comp_star"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

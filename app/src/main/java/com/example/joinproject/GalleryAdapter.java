@@ -41,6 +41,7 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.GalleryV
                 .into(holder.image);
         holder.title.setText(arrayList.get(position).getTitle());
         holder.content.setText(arrayList.get(position).getContent());
+        holder.company_name.setText(arrayList.get(position).getCompany_name());
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,6 +49,7 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.GalleryV
                 intent.putExtra("gallery_title", arrayList.get(position).getTitle());
                 intent.putExtra("gallery_content", arrayList.get(position).getContent());
                 intent.putExtra("gallery_image", arrayList.get(position).getImage());
+                intent.putExtra("gallery_comp_name", arrayList.get(position).getCompany_name());
                 v.getContext().startActivity(intent);
 
             }
@@ -64,6 +66,7 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.GalleryV
         ImageView image;
         TextView title;
         TextView content;
+        TextView company_name;
         LinearLayout linearLayout;
 
         public GalleryViewHolder(@NonNull final View itemView) {
@@ -71,6 +74,7 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.GalleryV
             this.image=itemView.findViewById(R.id.Gallery_image);
             this.title=itemView.findViewById(R.id.Gallery_title);
             this.content=itemView.findViewById(R.id.Gallery_content);
+            this.company_name=itemView.findViewById(R.id.Gallery_comp_name);
             this.linearLayout=itemView.findViewById(R.id.toGallery);
         }
     }

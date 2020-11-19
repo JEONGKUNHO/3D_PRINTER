@@ -7,10 +7,10 @@
     tools:context=".MessageActivity">
 
     <EditText
-        android:id="@+id/messageActivity_editText"
         android:layout_toLeftOf="@+id/messageActivity_button"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
+        android:id="@+id/messageActivity_editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <Button
