@@ -1,23 +1,21 @@
 package com.example.joinproject;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class ChatModel {
-    public String uid;
-    public String comp_bossId;
 
-    public String getUid() {
-        return uid;
-    }
 
-    public void setUid(String uid) {
-        this.uid = uid;
-    }
+    public Map<String, Boolean> users = new HashMap<>(); //채팅방의 유저들
+    public Map<String, Comment> comments = new HashMap<>();//채팅방의 대화내용
 
-    public String getComp_bossId() {
-        return comp_bossId;
-    }
 
-    public void setComp_bossId(String comp_bossId) {
-        this.comp_bossId = comp_bossId;
+
+    public static class Comment {
+
+        public String uid;
+        public String message;
+        public Object timestamp;
     }
 }
 

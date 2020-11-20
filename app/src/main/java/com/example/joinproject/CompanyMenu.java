@@ -2,7 +2,6 @@ package com.example.joinproject;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -25,6 +24,7 @@ public class CompanyMenu extends AppCompatActivity implements View.OnClickListen
         findViewById(R.id.review).setOnClickListener(this);
         findViewById(R.id.chat).setOnClickListener(this);
     }
+
 
     public void onClick(View v) {
         switch (v.getId()) {
@@ -127,17 +127,14 @@ public class CompanyMenu extends AppCompatActivity implements View.OnClickListen
                 }
 
             case R.id.chat:
-                Intent intent=new Intent(this,MessageActivity.class);
-                Log.e("test",getIntent().getStringExtra("comp_bossId"));
-                intent.putExtra("comp_bossId",getIntent().getStringExtra("comp_bossId"));
-                startActivity(intent);
+
+                //Intent intent =new Intent(this, PeopleFragment.class);
+               //PeopleFragment peopleFragment = (PeopleFragment) getSupportFragmentManager().findFragmentById(R.id.ll_fragment);
+
+                getSupportFragmentManager().beginTransaction().replace(R.id.ll_fragment,new PeopleFragment()).commit();
+
                 break;
 
-            case R.id.chat:
-                Intent intent=new Intent(this,MessageActivity.class);
-                intent.putExtra("comp_bossId",getIntent().getStringExtra("comp_bossId"));
-                startActivity(intent);
-                break;
 
 
         }

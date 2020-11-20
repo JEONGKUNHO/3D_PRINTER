@@ -14,6 +14,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.SetOptions;
 
@@ -25,7 +26,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
     private FirebaseAuth mAuth = FirebaseAuth.getInstance();
     private FirebaseFirestore mStore = FirebaseFirestore.getInstance();
 
-    private EditText mEmailText, mPasswordText , mPasswordText2;
+    private EditText mEmailText, mPasswordText , mPasswordText2, mNameText;
 
 
     @Override
@@ -36,6 +37,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
         mEmailText = findViewById(R.id.password_email);
         mPasswordText = findViewById(R.id.sign_password);
         mPasswordText2=findViewById(R.id.sign_password2);
+        mNameText=findViewById(R.id.signupActivity_edittext_name);
 
         findViewById(R.id.send_button).setOnClickListener(this);
         findViewById(R.id.back).setOnClickListener(this);
@@ -49,6 +51,8 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                 String x=mEmailText.getText().toString();
                 String a=mPasswordText.getText().toString();
                 String b=mPasswordText2.getText().toString();
+                String c=mNameText.getText().toString();
+
                 if(x.equals(null) || a.equals(null) || b.equals(null)){
                     Toast.makeText(SignupActivity.this, "값을 입력하세요.",Toast.LENGTH_SHORT).show();
                 }
@@ -62,6 +66,13 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
                                         FirebaseUser user = mAuth.getCurrentUser();
+
+                                        //채팅때매 추가한 부분
+                                        UserModel userModel = new UserModel();
+                                        userModel.userName = mNameText.getText().toString();
+                                        userModel.uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                                        String uid = task.getResult().getUser().getUid();
+                                        FirebaseDatabase.getInstance().getReference().child("users").child(uid).setValue(userModel);
 
                                         if (user != null) {
                                             Map<String, Object> userMap = new HashMap<>();

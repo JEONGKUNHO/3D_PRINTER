@@ -19,6 +19,15 @@
         android:textSize="50sp" />
 
     <EditText
+        android:id="@+id/signupActivity_edittext_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:layout_margin="8dp"
+        android:hint="Name"/>
+
+
+    <EditText
         android:id="@+id/password_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -1,21 +1,29 @@
 package com.example.joinproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 public class BoardDetail extends AppCompatActivity {
 
     private FirebaseAuth mauth=FirebaseAuth.getInstance();
-
     Button delete;
     Button modify;
     Button complete;
@@ -33,6 +41,32 @@ public class BoardDetail extends AppCompatActivity {
             modify.setVisibility(View.VISIBLE);
             complete.setVisibility(View.VISIBLE);
         }
+
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatabaseReference ref= FirebaseDatabase.getInstance().getReference();
+                Query contentFind=ref.child("Board").orderByChild("content").equalTo(getIntent().getStringExtra("board_content"));
+
+                contentFind.addListenerForSingleValueEvent(new ValueEventListener(){
+
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        for(DataSnapshot contentFind:snapshot.getChildren()){
+                            contentFind.getRef().removeValue();
+
+                        }
+                        Toast.makeText(BoardDetail.this, "삭제가 완료되었습니다.", Toast.LENGTH_SHORT).show();
+                        finish();
+                    }
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+            }
+        });
+
     }
 
     private void getIncomingIntent() {
@@ -60,5 +94,14 @@ public class BoardDetail extends AppCompatActivity {
                 .asBitmap()
                 .load(boardImage)
                 .into(image);
+    }
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent();
+        intent.putExtra("id","1");
+        intent.putExtra("description","sendback description from 2nd activity");
+        setResult(RESULT_OK, intent);
+        finish();
+
     }
 }

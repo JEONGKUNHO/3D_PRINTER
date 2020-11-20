@@ -43,8 +43,10 @@
         <activity android:name=".GalleryDetail"></activity>
         <activity android:name=".ReviewDetail"></activity>
         <activity android:name=".BoardDetail"></activity>
-        <activity android:name=".MessageActivity"></activity>
-
+        <activity android:name=".page_2"></activity>
+        <activity android:name=".ReviewDetail2"></activity>
+        <activity android:name=".ReviewDetail3"></activity>
+        <activity android:name=".ReviewDetail4"></activity>
 
     </application>
 
