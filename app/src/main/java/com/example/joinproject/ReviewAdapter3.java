@@ -51,7 +51,7 @@ public class ReviewAdapter3 extends RecyclerView.Adapter<ReviewAdapter3.ReviewVi
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), ReviewDetail.class);
+                Intent intent = new Intent(v.getContext(), ReviewDetail3.class);
                 intent.putExtra("review_title", arrayList.get(position).getTitle());
                 intent.putExtra("review_content", arrayList.get(position).getContent());
                 intent.putExtra("review_date", arrayList.get(position).getDate());
@@ -91,7 +91,6 @@ public class ReviewAdapter3 extends RecyclerView.Adapter<ReviewAdapter3.ReviewVi
             this.button = itemView.findViewById(R.id.plusReview);
             this.linearLayout = itemView.findViewById(R.id.toReviewDetail);
             this.delete = itemView.findViewById(R.id.delete);
-            this.modify = itemView.findViewById(R.id.modify);
 
         }
     }

@@ -57,4 +57,12 @@
         android:textSize="20sp"
         android:textColor="#000"/>
 
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="삭제"
+        android:visibility="gone" />
 </LinearLayout>

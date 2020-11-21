@@ -1,10 +1,12 @@
 package com.example.joinproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -29,6 +31,7 @@ public class page_3 extends Fragment {
     private FirebaseDatabase database;
     private DatabaseReference databaseReference;
 
+    Button WriteBoard;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -36,6 +39,14 @@ public class page_3 extends Fragment {
         setHasOptionsMenu(true);
         View v=inflater.inflate(R.layout.fragment_page_3, container, false);
 
+        WriteBoard=v.findViewById(R.id.WriteBoard);
+        WriteBoard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), WritePostActivity.class);
+                startActivity(intent);
+            }
+        });
         recyclerView=v.findViewById(R.id.recyclerView); //id연결
         recyclerView.setHasFixedSize(true);//리사이클러뷰 기존성능강화 별로 안중요
         layoutManager=new LinearLayoutManager(getActivity());

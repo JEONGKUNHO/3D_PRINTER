@@ -91,7 +91,6 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ReviewView
             this.button = itemView.findViewById(R.id.plusReview);
             this.linearLayout = itemView.findViewById(R.id.toReviewDetail);
             this.delete = itemView.findViewById(R.id.delete);
-            this.modify = itemView.findViewById(R.id.modify);
 
         }
     }

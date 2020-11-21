@@ -42,6 +42,7 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.GalleryV
         holder.title.setText(arrayList.get(position).getTitle());
         holder.content.setText(arrayList.get(position).getContent());
         holder.company_name.setText(arrayList.get(position).getCompany_name());
+        holder.writer.setText(arrayList.get(position).getAuthor());
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,6 +51,7 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.GalleryV
                 intent.putExtra("gallery_content", arrayList.get(position).getContent());
                 intent.putExtra("gallery_image", arrayList.get(position).getImage());
                 intent.putExtra("gallery_comp_name", arrayList.get(position).getCompany_name());
+                intent.putExtra("gallery_bossId", arrayList.get(position).getAuthor());
                 v.getContext().startActivity(intent);
 
             }
@@ -67,6 +69,8 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.GalleryV
         TextView title;
         TextView content;
         TextView company_name;
+        TextView writer;
+
         LinearLayout linearLayout;
 
         public GalleryViewHolder(@NonNull final View itemView) {
@@ -76,6 +80,7 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.GalleryV
             this.content=itemView.findViewById(R.id.Gallery_content);
             this.company_name=itemView.findViewById(R.id.Gallery_comp_name);
             this.linearLayout=itemView.findViewById(R.id.toGallery);
+            this.writer=itemView.findViewById(R.id.Gallery_writer);
         }
     }
 }

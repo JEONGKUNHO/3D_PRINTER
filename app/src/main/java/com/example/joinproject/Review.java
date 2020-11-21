@@ -9,13 +9,13 @@ public class Review {
 
     public Review(){}
 
-    Review(String title,String content, String imageUrl, String writer, String date){
-        this.title=title;
-        this.content=content;
-        this.imageUrl=imageUrl;
-        this.writer=writer;
-        this.date=date;
-    }
+        Review(String title,String content, String imageUrl, String writer, String date){
+            this.title=title;
+            this.content=content;
+            this.imageUrl=imageUrl;
+            this.writer=writer;
+            this.date=date;
+        }
 
 
     public String getTitle() {

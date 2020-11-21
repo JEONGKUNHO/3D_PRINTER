@@ -25,7 +25,6 @@ public class BoardDetail extends AppCompatActivity {
     private FirebaseAuth mauth = FirebaseAuth.getInstance();
     FirebaseDatabase database=FirebaseDatabase.getInstance();
     Button delete;
-    Button modify;
     Button complete;
 
     @Override
@@ -34,11 +33,9 @@ public class BoardDetail extends AppCompatActivity {
         setContentView(R.layout.board_detail);
         getIncomingIntent();
         delete = findViewById(R.id.delete);
-        modify = findViewById(R.id.modify);
         complete = findViewById(R.id.complete);
         if (mauth.getUid().equals(getIntent().getStringExtra("board_writer"))) {
             delete.setVisibility(View.VISIBLE);
-            modify.setVisibility(View.VISIBLE);
             complete.setVisibility(View.VISIBLE);
         }
 

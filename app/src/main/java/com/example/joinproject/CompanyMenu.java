@@ -61,6 +61,7 @@ public class CompanyMenu extends AppCompatActivity implements View.OnClickListen
                     intent.putExtra("comp_intro", getIntent().getStringExtra("comp_intro"));
                     intent.putExtra("comp_image", getIntent().getStringExtra("comp_image"));
                     intent.putExtra("comp_name", getIntent().getStringExtra("comp_name"));
+                    intent.putExtra("comp_bossId",getIntent().getStringExtra("comp_bossId"));
                     startActivity(intent);
                     break;
                 } else if (getIntent().getStringExtra("comp_name").equals("기업2")) {
@@ -68,6 +69,7 @@ public class CompanyMenu extends AppCompatActivity implements View.OnClickListen
                     intent.putExtra("comp_intro", getIntent().getStringExtra("comp_intro"));
                     intent.putExtra("comp_image", getIntent().getStringExtra("comp_image"));
                     intent.putExtra("comp_name", getIntent().getStringExtra("comp_name"));
+                    intent.putExtra("comp_bossId",getIntent().getStringExtra("comp_bossId"));
                     startActivity(intent);
                     break;
                 } else if (getIntent().getStringExtra("comp_name").equals("기업3")) {
@@ -75,6 +77,7 @@ public class CompanyMenu extends AppCompatActivity implements View.OnClickListen
                     intent.putExtra("comp_intro", getIntent().getStringExtra("comp_intro"));
                     intent.putExtra("comp_image", getIntent().getStringExtra("comp_image"));
                     intent.putExtra("comp_name", getIntent().getStringExtra("comp_name"));
+                    intent.putExtra("comp_bossId",getIntent().getStringExtra("comp_bossId"));
                     startActivity(intent);
                     break;
                 } else if (getIntent().getStringExtra("comp_name").equals("기업4")) {
@@ -82,6 +85,7 @@ public class CompanyMenu extends AppCompatActivity implements View.OnClickListen
                     intent.putExtra("comp_intro", getIntent().getStringExtra("comp_intro"));
                     intent.putExtra("comp_image", getIntent().getStringExtra("comp_image"));
                     intent.putExtra("comp_name", getIntent().getStringExtra("comp_name"));
+                    intent.putExtra("comp_bossId",getIntent().getStringExtra("comp_bossId"));
                     startActivity(intent);
                     break;
                 }

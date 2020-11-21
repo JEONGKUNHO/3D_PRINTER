@@ -9,12 +9,23 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
+    page_1 fragment1;
+    page_2 fragment2;
+    page_3 fragment3;
+    page_4 fragment4;
+    page_5 fragment5;
+    PagerAdapter adapter;
+    ViewPager viewPager;
+    OnBackPressedListener listener;
     private BottomNavigationView mBottomNV;
 
 
@@ -22,6 +33,19 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        viewPager=findViewById(R.id.viewpager);
+        fragment1=new page_1();
+        fragment2=new page_2();
+        fragment3=new page_3();
+        fragment4=new page_4();
+        fragment5=new page_5();
+
+        adapter=new VPAdaptor(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        ((VPAdaptor) adapter).addItem(fragment1);
+        ((VPAdaptor) adapter).addItem(fragment2);
+        ((VPAdaptor) adapter).addItem(fragment3);
+        ((VPAdaptor) adapter).addItem(fragment4);
+        ((VPAdaptor) adapter).addItem(fragment5);
         setContentView(R.layout.activity_main2);
         mBottomNV = findViewById(R.id.bottomNavi);
         mBottomNV.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() { //NavigationItemSelecte
@@ -76,5 +100,21 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void setOnBackPressedListener(OnBackPressedListener listener){
+        this.listener=listener;
+    }
+
+    @Override
+    public void onBackPressed(){
+        if(listener!=null){
+            listener.onBackPressed();
+        }else{
+            super.onBackPressed();
+        }
+    }
+
+    public void setCurrentItem(){
+        viewPager.setCurrentItem(1);
+    }
 }
 

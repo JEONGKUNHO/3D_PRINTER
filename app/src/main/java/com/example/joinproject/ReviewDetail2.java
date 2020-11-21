@@ -34,7 +34,6 @@ public class ReviewDetail2 extends AppCompatActivity {
         getIncomingIntent();
 
         delete=findViewById(R.id.delete);
-        modify=findViewById(R.id.modify);
 
         delete.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,8 +62,7 @@ public class ReviewDetail2 extends AppCompatActivity {
 
 
         if(mauth.getUid().equals(getIntent().getStringExtra("review_writer"))){
-            delete.setVisibility(View.VISIBLE);
-            modify.setVisibility(View.VISIBLE);
+                delete.setVisibility(View.VISIBLE);
         }
     }
 

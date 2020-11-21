@@ -11,6 +11,13 @@ public class Gallery2 {
 
     public Gallery2(){}
 
+    Gallery2(String title,String content, String image, String author, String date){
+        this.title=title;
+        this.content=content;
+        this.image=image;
+        this.author=author;
+        this.date=date;
+    }
     public String getCompany_name() { return company_name; }
 
     public void setCompany_name(String company_name) { this.company_name = company_name; }

@@ -55,6 +55,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                         Toast.makeText(LoginActivity.this, "로그인 성공: "+user.getUid(),
                                                 Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(LoginActivity.this , MainActivity.class);
+                                        finish();
                                         startActivity(intent);
                                     }
                                 } else {

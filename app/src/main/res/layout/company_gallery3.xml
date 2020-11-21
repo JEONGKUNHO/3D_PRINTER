@@ -22,9 +22,13 @@
             android:textStyle="bold"></TextView>
 
 
-
     </LinearLayout>
-
+    <Button
+        android:id="@+id/WriteGallery"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:text="갤러리 작성" />
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"

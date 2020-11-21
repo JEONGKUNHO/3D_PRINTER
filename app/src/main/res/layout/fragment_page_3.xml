@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".page_3">
 
+    <Button
+        android:id="@+id/WriteBoard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="의뢰 게시글 작성" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"

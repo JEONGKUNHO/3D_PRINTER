@@ -1,13 +1,17 @@
 package com.example.joinproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -24,12 +28,25 @@ public class companyGallery3 extends AppCompatActivity {
     private ArrayList<Gallery3> arrayList;
     private FirebaseDatabase database;
     private DatabaseReference databaseReference;
+    private FirebaseAuth mauth=FirebaseAuth.getInstance();
 
+    Button WriteGallery;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.company_gallery3);
 
+        WriteGallery=findViewById(R.id.WriteGallery);
+
+        if(mauth.getUid().equals(getIntent().getStringExtra("comp_bossId"))){
+            WriteGallery.setVisibility(View.VISIBLE);
+        }
+        WriteGallery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), plusGallery3.class));
+            }
+        });
         recyclerView = findViewById(R.id.recyclerView); //id연결
         recyclerView.setHasFixedSize(true);//리사이클러뷰 기존성능강화 별로 안중요
         layoutManager = new LinearLayoutManager(this);

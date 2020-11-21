@@ -37,7 +37,7 @@ public class plusReview extends BasicActivity {
     private EditText editText2;
     private Button button;
     private Uri imageUri;
-    private DatabaseReference root= FirebaseDatabase.getInstance().getReference("Board");
+    private DatabaseReference root= FirebaseDatabase.getInstance().getReference("Review");
     private StorageReference reference= FirebaseStorage.getInstance().getReference();
     private FirebaseAuth mauth=FirebaseAuth.getInstance();
 

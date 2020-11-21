@@ -92,7 +92,6 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.BoardViewHol
             this.writer = itemView.findViewById(R.id.Board_writer);
             this.linearLayout = itemView.findViewById(R.id.toBoardDetail);
             this.delete = itemView.findViewById(R.id.delete);
-            this.modify = itemView.findViewById(R.id.modify);
             this.complete = itemView.findViewById(R.id.complete);
             this.num = itemView.findViewById(R.id.Board_complete);
         }
