@@ -84,7 +84,7 @@ public class MainActivity3 extends AppCompatActivity {
         //바꾼것도 없고, 처음 접속도 아니고..
         if(!isChanged && !isFirst){
             //ChatActivity로 전환
-            Intent intent= new Intent(this, ChatActivity.class);
+            Intent intent= new Intent(this, ChatActivity3.class);
             startActivity(intent);
             finish();
         }else{

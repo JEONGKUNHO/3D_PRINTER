@@ -47,8 +47,14 @@
         <activity android:name=".ReviewDetail2"></activity>
         <activity android:name=".ReviewDetail3"></activity>
         <activity android:name=".ReviewDetail4"></activity>
+        <activity android:name=".MainActivity1"></activity>
+        <activity android:name=".MainActivity2"></activity>
         <activity android:name=".MainActivity3"></activity>
+        <activity android:name=".MainActivity4"></activity>
         <activity android:name=".ChatActivity"></activity>
+        <activity android:name=".ChatActivity2"></activity>
+        <activity android:name=".ChatActivity3"></activity>
+        <activity android:name=".ChatActivity4"></activity>
 
     </application>
 

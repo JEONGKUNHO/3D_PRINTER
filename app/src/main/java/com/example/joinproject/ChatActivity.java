@@ -48,8 +48,8 @@ public class ChatActivity extends AppCompatActivity {
 
         //Firebase DB관리 객체와 'caht'노드 참조객체 얻어오기
         firebaseDatabase= FirebaseDatabase.getInstance();
-        chatRef= firebaseDatabase.getReference("chat");
-
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+        chatRef = firebaseDatabase.getReference("chat");
 
         //firebaseDB에서 채팅 메세지들 실시간 읽어오기..
         //'chat'노드에 저장되어 있는 데이터들을 읽어오기
