@@ -6,6 +6,7 @@ public class Board {
     private String imageUrl;
     private String writer;
     private String date;
+    private int complete;  //0이면 의뢰안된 상태 1이면 의뢰완료
 
     public Board(){}
 
@@ -16,6 +17,10 @@ public class Board {
         this.writer=writer;
         this.date=date;
     }
+
+    public int getComplete() { return complete; }
+
+    public void setComplete(int complete) { this.complete = complete; }
 
     public String getTitle() {
         return title;

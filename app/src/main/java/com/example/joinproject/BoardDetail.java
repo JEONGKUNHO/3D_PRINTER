@@ -1,6 +1,5 @@
 package com.example.joinproject;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,7 +22,8 @@ import com.google.firebase.database.ValueEventListener;
 
 public class BoardDetail extends AppCompatActivity {
 
-    private FirebaseAuth mauth=FirebaseAuth.getInstance();
+    private FirebaseAuth mauth = FirebaseAuth.getInstance();
+    FirebaseDatabase database=FirebaseDatabase.getInstance();
     Button delete;
     Button modify;
     Button complete;
@@ -33,32 +33,57 @@ public class BoardDetail extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.board_detail);
         getIncomingIntent();
-        delete=findViewById(R.id.delete);
-        modify=findViewById(R.id.modify);
-        complete=findViewById(R.id.complete);
-        if(mauth.getUid().equals(getIntent().getStringExtra("board_writer"))){
+        delete = findViewById(R.id.delete);
+        modify = findViewById(R.id.modify);
+        complete = findViewById(R.id.complete);
+        if (mauth.getUid().equals(getIntent().getStringExtra("board_writer"))) {
             delete.setVisibility(View.VISIBLE);
             modify.setVisibility(View.VISIBLE);
             complete.setVisibility(View.VISIBLE);
         }
 
-        delete.setOnClickListener(new View.OnClickListener() {
+        complete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DatabaseReference ref= FirebaseDatabase.getInstance().getReference();
-                Query contentFind=ref.child("Board").orderByChild("content").equalTo(getIntent().getStringExtra("board_content"));
+                DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+                Query contentFind = ref.child("Board").orderByChild("content").equalTo(getIntent().getStringExtra("board_content"));
 
-                contentFind.addListenerForSingleValueEvent(new ValueEventListener(){
+                contentFind.addListenerForSingleValueEvent(new ValueEventListener() {
 
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        for(DataSnapshot contentFind:snapshot.getChildren()){
+                        for (DataSnapshot contentFind : snapshot.getChildren()) {
+                            contentFind.getRef().child("complete").setValue(1);
+                        }
+                        Toast.makeText(BoardDetail.this, "의뢰 완료로 상태가 바뀌었습니다.", Toast.LENGTH_SHORT).show();
+                        finish();
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+            }
+        });
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+                Query contentFind = ref.child("Board").orderByChild("content").equalTo(getIntent().getStringExtra("board_content"));
+
+                contentFind.addListenerForSingleValueEvent(new ValueEventListener() {
+
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        for (DataSnapshot contentFind : snapshot.getChildren()) {
                             contentFind.getRef().removeValue();
 
                         }
                         Toast.makeText(BoardDetail.this, "삭제가 완료되었습니다.", Toast.LENGTH_SHORT).show();
                         finish();
                     }
+
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
 
@@ -77,7 +102,7 @@ public class BoardDetail extends AppCompatActivity {
             String boardContent = getIntent().getStringExtra("board_content");
             String boardImage = getIntent().getStringExtra("board_image");
 
-            setIntent(boardTitle, boardContent,boardDate, boardImage);
+            setIntent(boardTitle, boardContent, boardDate, boardImage);
         }
     }
 
@@ -86,7 +111,7 @@ public class BoardDetail extends AppCompatActivity {
         TextView title = findViewById(R.id.board_title);
         TextView content = findViewById(R.id.board_content);
         TextView date = findViewById(R.id.board_date);
-        ImageView image=findViewById(R.id.board_image);
+        ImageView image = findViewById(R.id.board_image);
         title.setText(boardTitle);
         content.setText(boardContent);
         date.setText(boardDate);
@@ -94,14 +119,5 @@ public class BoardDetail extends AppCompatActivity {
                 .asBitmap()
                 .load(boardImage)
                 .into(image);
-    }
-    @Override
-    public void onBackPressed() {
-        Intent intent = new Intent();
-        intent.putExtra("id","1");
-        intent.putExtra("description","sendback description from 2nd activity");
-        setResult(RESULT_OK, intent);
-        finish();
-
     }
 }

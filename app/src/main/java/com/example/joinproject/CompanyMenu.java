@@ -128,13 +128,8 @@ public class CompanyMenu extends AppCompatActivity implements View.OnClickListen
 
             case R.id.chat:
 
-                //Intent intent =new Intent(this, PeopleFragment.class);
-               //PeopleFragment peopleFragment = (PeopleFragment) getSupportFragmentManager().findFragmentById(R.id.ll_fragment);
-
-                getSupportFragmentManager().beginTransaction().replace(R.id.ll_fragment,new PeopleFragment()).commit();
-
+                startActivity(new Intent(this, MainActivity3.class));
                 break;
-
 
 
         }

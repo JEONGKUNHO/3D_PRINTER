@@ -22,7 +22,7 @@ public class companyReview2 extends AppCompatActivity implements View.OnClickLis
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
-    private RecyclerView.LayoutManager layoutManager;
+    private LinearLayoutManager layoutManager;
     private ArrayList<Review2> arrayList;
     private FirebaseDatabase database;
     private DatabaseReference databaseReference;
@@ -35,6 +35,8 @@ public class companyReview2 extends AppCompatActivity implements View.OnClickLis
         recyclerView = findViewById(R.id.recyclerView); //id연결
         recyclerView.setHasFixedSize(true);//리사이클러뷰 기존성능강화 별로 안중요
         layoutManager = new LinearLayoutManager(this);
+        layoutManager.setReverseLayout(true);
+        layoutManager.setStackFromEnd(true);
         recyclerView.setLayoutManager(layoutManager);
         arrayList = new ArrayList<>();  //Company 객체를 담을 어레이리스트(어뎁터쪽으로)
 
@@ -74,4 +76,3 @@ public class companyReview2 extends AppCompatActivity implements View.OnClickLis
         }
     }
 }
-

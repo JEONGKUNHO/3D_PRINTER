@@ -17,6 +17,13 @@
         android:textAlignment="center"
         android:textColor="#AEAEAE"
         android:textSize="50sp" />
+    <ImageView
+        android:id="@+id/signupActivity_imageview_profile"
+        android:src="@drawable/ic_baseline_image_24"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="50dp"
+        android:layout_gravity="center"></ImageView>
 
     <EditText
         android:id="@+id/signupActivity_edittext_name"

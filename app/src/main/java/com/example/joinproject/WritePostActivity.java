@@ -122,7 +122,7 @@ public class WritePostActivity extends BasicActivity {
                         String date = new SimpleDateFormat("yyyy년 MM월 dd일 EE요일", Locale.getDefault()).format(currentTime);
 
                         DatabaseReference database = FirebaseDatabase.getInstance().getReference();
-                        Board board = new Board(editText.getText().toString(), editText2.getText().toString(),uri.toString(),mauth.getUid(),date);
+                        Board board = new Board(editText.getText().toString(), editText2.getText().toString(), uri.toString(), mauth.getUid(), date);
                         database.child("Board").push().setValue(board);
                         Toast.makeText(WritePostActivity.this, "업로드 성공.", Toast.LENGTH_SHORT).show();
                         finish();
@@ -141,6 +141,7 @@ public class WritePostActivity extends BasicActivity {
                 Toast.makeText(WritePostActivity.this, "로딩에 오류가 있습니다.", Toast.LENGTH_SHORT).show();
             }
         });
+
     }
 
     private String getFileExtension(Uri mUri){
