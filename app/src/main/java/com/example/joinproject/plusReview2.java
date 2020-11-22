@@ -120,6 +120,9 @@ public class plusReview2 extends BasicActivity {
                         database.child("Review2").push().setValue(review);
                         Toast.makeText(plusReview2.this, "업로드 성공.", Toast.LENGTH_SHORT).show();
                         finish();
+                        startActivity(new Intent(plusReview2.this,MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK));
+                        startActivity(new Intent(plusReview2.this,CompanyMenu2.class));
+                        startActivity(new Intent(plusReview2.this,companyReview2.class));
                     }
                 });
             }

@@ -46,12 +46,38 @@ public class CompanyAdapter extends RecyclerView.Adapter<CompanyAdapter.CompanyV
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), CompanyMenu.class);
-                intent.putExtra("comp_bossId", arrayList.get(position).getComp_bossId());
-                intent.putExtra("comp_name",arrayList.get(position).getComp_name());
-                intent.putExtra("comp_intro",arrayList.get(position).getComp_intro());
-                intent.putExtra("comp_image",arrayList.get(position).getComp_image());
-                v.getContext().startActivity(intent);
+                if(arrayList.get(position).getComp_num()==1) {
+                    Intent intent = new Intent(v.getContext(), CompanyMenu.class);
+                    intent.putExtra("comp_bossId", arrayList.get(position).getComp_bossId());
+                    intent.putExtra("comp_name", arrayList.get(position).getComp_name());
+                    intent.putExtra("comp_intro", arrayList.get(position).getComp_intro());
+                    intent.putExtra("comp_image", arrayList.get(position).getComp_image());
+                    v.getContext().startActivity(intent);
+                }
+                else if(arrayList.get(position).getComp_num()==2) {
+                    Intent intent = new Intent(v.getContext(), CompanyMenu2.class);
+                    intent.putExtra("comp_bossId", arrayList.get(position).getComp_bossId());
+                    intent.putExtra("comp_name", arrayList.get(position).getComp_name());
+                    intent.putExtra("comp_intro", arrayList.get(position).getComp_intro());
+                    intent.putExtra("comp_image", arrayList.get(position).getComp_image());
+                    v.getContext().startActivity(intent);
+                }
+                else if(arrayList.get(position).getComp_num()==3) {
+                    Intent intent = new Intent(v.getContext(), CompanyMenu3.class);
+                    intent.putExtra("comp_bossId", arrayList.get(position).getComp_bossId());
+                    intent.putExtra("comp_name", arrayList.get(position).getComp_name());
+                    intent.putExtra("comp_intro", arrayList.get(position).getComp_intro());
+                    intent.putExtra("comp_image", arrayList.get(position).getComp_image());
+                    v.getContext().startActivity(intent);
+                }
+                else if(arrayList.get(position).getComp_num()==4) {
+                    Intent intent = new Intent(v.getContext(), CompanyMenu4.class);
+                    intent.putExtra("comp_bossId", arrayList.get(position).getComp_bossId());
+                    intent.putExtra("comp_name", arrayList.get(position).getComp_name());
+                    intent.putExtra("comp_intro", arrayList.get(position).getComp_intro());
+                    intent.putExtra("comp_image", arrayList.get(position).getComp_image());
+                    v.getContext().startActivity(intent);
+                }
             }
         });
     }

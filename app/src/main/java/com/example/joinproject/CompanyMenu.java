@@ -18,7 +18,7 @@ public class CompanyMenu extends AppCompatActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.company_menu);
         companyName = findViewById(R.id.companyName);
-        companyName.setText(getIntent().getStringExtra("comp_name"));
+        companyName.setText("3D HUBS");
         findViewById(R.id.intro).setOnClickListener(this);
         findViewById(R.id.gallery).setOnClickListener(this);
         findViewById(R.id.review).setOnClickListener(this);
@@ -29,115 +29,36 @@ public class CompanyMenu extends AppCompatActivity implements View.OnClickListen
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.intro:
-                if (getIntent().getStringExtra("comp_name").equals("기업1")) {
-                    Intent intent = new Intent(this, companyIntro.class);
-                    intent.putExtra("comp_intro", getIntent().getStringExtra("comp_intro"));
-                    intent.putExtra("comp_image", getIntent().getStringExtra("comp_image"));
-                    startActivity(intent);
-                    break;
-                } else if (getIntent().getStringExtra("comp_name").equals("기업2")) {
-                    Intent intent = new Intent(this, companyIntro2.class);
-                    intent.putExtra("comp_intro", getIntent().getStringExtra("comp_intro"));
-                    intent.putExtra("comp_image", getIntent().getStringExtra("comp_image"));
-                    startActivity(intent);
-                    break;
-                } else if (getIntent().getStringExtra("comp_name").equals("기업3")) {
-                    Intent intent = new Intent(this, companyIntro3.class);
-                    intent.putExtra("comp_intro", getIntent().getStringExtra("comp_intro"));
-                    intent.putExtra("comp_image", getIntent().getStringExtra("comp_image"));
-                    startActivity(intent);
-                    break;
-                } else if (getIntent().getStringExtra("comp_name").equals("기업4")) {
-                    Intent intent = new Intent(this, companyIntro4.class);
-                    intent.putExtra("comp_intro", getIntent().getStringExtra("comp_intro"));
-                    intent.putExtra("comp_image", getIntent().getStringExtra("comp_image"));
-                    startActivity(intent);
-                    break;
-                }
+                Intent intent = new Intent(this, companyIntro.class);
+                intent.putExtra("comp_intro", getIntent().getStringExtra("comp_intro"));
+                intent.putExtra("comp_image", getIntent().getStringExtra("comp_image"));
+                startActivity(intent);
+                break;
 
             case R.id.gallery:
-                if (getIntent().getStringExtra("comp_name").equals("기업1")) {
-                    Intent intent = new Intent(this, companyGallery.class);
-                    intent.putExtra("comp_intro", getIntent().getStringExtra("comp_intro"));
-                    intent.putExtra("comp_image", getIntent().getStringExtra("comp_image"));
-                    intent.putExtra("comp_name", getIntent().getStringExtra("comp_name"));
-                    intent.putExtra("comp_bossId",getIntent().getStringExtra("comp_bossId"));
-                    startActivity(intent);
-                    break;
-                } else if (getIntent().getStringExtra("comp_name").equals("기업2")) {
-                    Intent intent = new Intent(this, companyGallery2.class);
-                    intent.putExtra("comp_intro", getIntent().getStringExtra("comp_intro"));
-                    intent.putExtra("comp_image", getIntent().getStringExtra("comp_image"));
-                    intent.putExtra("comp_name", getIntent().getStringExtra("comp_name"));
-                    intent.putExtra("comp_bossId",getIntent().getStringExtra("comp_bossId"));
-                    startActivity(intent);
-                    break;
-                } else if (getIntent().getStringExtra("comp_name").equals("기업3")) {
-                    Intent intent = new Intent(this, companyGallery3.class);
-                    intent.putExtra("comp_intro", getIntent().getStringExtra("comp_intro"));
-                    intent.putExtra("comp_image", getIntent().getStringExtra("comp_image"));
-                    intent.putExtra("comp_name", getIntent().getStringExtra("comp_name"));
-                    intent.putExtra("comp_bossId",getIntent().getStringExtra("comp_bossId"));
-                    startActivity(intent);
-                    break;
-                } else if (getIntent().getStringExtra("comp_name").equals("기업4")) {
-                    Intent intent = new Intent(this, companyGallery4.class);
-                    intent.putExtra("comp_intro", getIntent().getStringExtra("comp_intro"));
-                    intent.putExtra("comp_image", getIntent().getStringExtra("comp_image"));
-                    intent.putExtra("comp_name", getIntent().getStringExtra("comp_name"));
-                    intent.putExtra("comp_bossId",getIntent().getStringExtra("comp_bossId"));
-                    startActivity(intent);
-                    break;
-                }
+
+                Intent intent1 = new Intent(this, companyGallery.class);
+                intent1.putExtra("comp_intro", getIntent().getStringExtra("comp_intro"));
+                intent1.putExtra("comp_image", getIntent().getStringExtra("comp_image"));
+                intent1.putExtra("comp_name", getIntent().getStringExtra("comp_name"));
+                intent1.putExtra("comp_bossId", getIntent().getStringExtra("comp_bossId"));
+                startActivity(intent1);
+                break;
+
 
             case R.id.review:
-                if (getIntent().getStringExtra("comp_name").equals("기업1")) {
-                    Intent intent = new Intent(this, companyReview.class);
-                    intent.putExtra("comp_intro", getIntent().getStringExtra("comp_intro"));
-                    intent.putExtra("comp_image", getIntent().getStringExtra("comp_image"));
-                    intent.putExtra("comp_name", getIntent().getStringExtra("comp_name"));
-                    startActivity(intent);
-                    break;
-                } else if (getIntent().getStringExtra("comp_name").equals("기업2")) {
-                    Intent intent = new Intent(this, companyReview2.class);
-                    intent.putExtra("comp_intro", getIntent().getStringExtra("comp_intro"));
-                    intent.putExtra("comp_image", getIntent().getStringExtra("comp_image"));
-                    intent.putExtra("comp_name", getIntent().getStringExtra("comp_name"));
-                    startActivity(intent);
-                    break;
-                } else if (getIntent().getStringExtra("comp_name").equals("기업3")) {
-                    Intent intent = new Intent(this, companyReview3.class);
-                    intent.putExtra("comp_intro", getIntent().getStringExtra("comp_intro"));
-                    intent.putExtra("comp_image", getIntent().getStringExtra("comp_image"));
-                    intent.putExtra("comp_name", getIntent().getStringExtra("comp_name"));
-                    startActivity(intent);
-                    break;
-                } else if (getIntent().getStringExtra("comp_name").equals("기업4")) {
-                    Intent intent = new Intent(this, companyReview4.class);
-                    intent.putExtra("comp_intro", getIntent().getStringExtra("comp_intro"));
-                    intent.putExtra("comp_image", getIntent().getStringExtra("comp_image"));
-                    intent.putExtra("comp_name", getIntent().getStringExtra("comp_name"));
-                    startActivity(intent);
-                    break;
-                }
+                Intent intent3 = new Intent(this, companyReview.class);
+                intent3.putExtra("comp_intro", getIntent().getStringExtra("comp_intro"));
+                intent3.putExtra("comp_image", getIntent().getStringExtra("comp_image"));
+                intent3.putExtra("comp_name", getIntent().getStringExtra("comp_name"));
+                startActivity(intent3);
+                break;
 
             case R.id.chat:
 
-                if (getIntent().getStringExtra("comp_name").equals("기업1")) {
-                    startActivity(new Intent(this, MainActivity1.class));
-                    break;
-                } else if(getIntent().getStringExtra("comp_name").equals("기업2")) {
-                startActivity(new Intent(this, MainActivity2.class));
+                startActivity(new Intent(this, MainActivity1.class));
                 break;
-            }
-                else if(getIntent().getStringExtra("comp_name").equals("기업3")) {
-                startActivity(new Intent(this, MainActivity3.class));
-                break;
-            }
-                else if(getIntent().getStringExtra("comp_name").equals("기업4")) {
-                startActivity(new Intent(this, MainActivity4.class));
-                break;
-            }
+
 
 
         }

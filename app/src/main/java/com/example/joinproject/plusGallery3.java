@@ -120,6 +120,9 @@ public class plusGallery3 extends BasicActivity {
                         database.child("Gallery3").push().setValue(gallery);
                         Toast.makeText(plusGallery3.this, "업로드 성공.", Toast.LENGTH_SHORT).show();
                         finish();
+                        startActivity(new Intent(plusGallery3.this,MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK));
+                        startActivity(new Intent(plusGallery3.this,CompanyMenu3.class));
+                        startActivity(new Intent(plusGallery3.this,companyGallery3.class));
                     }
                 });
             }

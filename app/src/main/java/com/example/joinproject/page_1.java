@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -18,6 +19,12 @@ public class page_1 extends Fragment implements OnBackPressedListener {
     MainActivity mainActivity;
     long backKeyPressedTime;
     Toast toast;
+    ImageView imageView1;
+    ImageView imageView2;
+    ImageView imageView3;
+    ImageView imageView4;
+    ImageView imageView5;
+    ImageView imageView6;
 
     @Nullable
     @Override

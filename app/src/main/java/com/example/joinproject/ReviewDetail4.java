@@ -1,5 +1,6 @@
 package com.example.joinproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -50,6 +51,9 @@ public class ReviewDetail4 extends AppCompatActivity {
                         }
                         Toast.makeText(ReviewDetail4.this, "삭제가 완료되었습니다.", Toast.LENGTH_SHORT).show();
                         finish();
+                        startActivity(new Intent(ReviewDetail4.this,MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK));
+                        startActivity(new Intent(ReviewDetail4.this,CompanyMenu4.class));
+                        startActivity(new Intent(ReviewDetail4.this,companyReview4.class));
                     }
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {

@@ -73,6 +73,17 @@
                 android:layout_gravity="bottom"
                 />
 
+            <TextView
+                android:id="@+id/Board_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="핸드폰번호"
+                android:visibility="gone"
+                android:textSize="10dp"
+                android:layout_gravity="bottom"
+                />
+
         </LinearLayout>
 
 

@@ -22,6 +22,9 @@
         </activity>
         <activity android:name=".PasswordResetActivity" />
         <activity android:name=".CompanyMenu"></activity>
+        <activity android:name=".CompanyMenu2"></activity>
+        <activity android:name=".CompanyMenu3"></activity>
+        <activity android:name=".CompanyMenu4"></activity>
         <activity android:name=".companyIntro"></activity>
         <activity android:name=".companyIntro2"></activity>
         <activity android:name=".companyIntro3"></activity>

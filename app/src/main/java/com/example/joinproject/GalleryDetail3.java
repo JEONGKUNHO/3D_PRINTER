@@ -1,5 +1,6 @@
 package com.example.joinproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -46,6 +47,10 @@ public class GalleryDetail3 extends AppCompatActivity {
                         }
                         Toast.makeText(GalleryDetail3.this, "삭제가 완료되었습니다.", Toast.LENGTH_SHORT).show();
                         finish();
+                        startActivity(new Intent(GalleryDetail3.this,MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK));
+                        startActivity(new Intent(GalleryDetail3.this,CompanyMenu3.class));
+                        startActivity(new Intent(GalleryDetail3.this,companyGallery3.class));
+
                     }
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {

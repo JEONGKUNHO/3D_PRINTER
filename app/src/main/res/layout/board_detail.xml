@@ -65,6 +65,19 @@
         android:textSize="20sp"
         android:layout_marginBottom="40dp"
         android:textColor="#000"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/board_phone"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="10dp"
+        android:text="phone"
+        android:textSize="14sp"
+        android:visibility="gone"
+        android:layout_marginBottom="40dp"
+        android:textColor="#000"/>
+
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -31,7 +32,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
-public class WritePostActivity extends BasicActivity {
+public class WritePostActivity extends AppCompatActivity {
 
     private static int PICK_IMAGE_REQUEST = 1;
     ImageView imageView;
@@ -39,12 +40,14 @@ public class WritePostActivity extends BasicActivity {
     private EditText editText2;
     private Button button;
     private Uri imageUri;
+    private EditText phone;
     private DatabaseReference root=FirebaseDatabase.getInstance().getReference("Board");
     private StorageReference reference= FirebaseStorage.getInstance().getReference();
     private FirebaseAuth mauth=FirebaseAuth.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_write_post);
 
@@ -54,7 +57,7 @@ public class WritePostActivity extends BasicActivity {
         editText = (EditText) findViewById(R.id.write_title);
         editText2 = (EditText) findViewById(R.id.write_content);
         button = (Button) findViewById(R.id.check);
-
+        phone=(EditText) findViewById(R.id.write_phone);
 
     }
 
@@ -122,10 +125,12 @@ public class WritePostActivity extends BasicActivity {
                         String date = new SimpleDateFormat("yyyy년 MM월 dd일 EE요일", Locale.getDefault()).format(currentTime);
 
                         DatabaseReference database = FirebaseDatabase.getInstance().getReference();
-                        Board board = new Board(editText.getText().toString(), editText2.getText().toString(), uri.toString(), mauth.getUid(), date);
+                        Board board = new Board(editText.getText().toString(), editText2.getText().toString(),
+                                uri.toString(), mauth.getUid(), date, phone.getText().toString());
                         database.child("Board").push().setValue(board);
                         Toast.makeText(WritePostActivity.this, "업로드 성공.", Toast.LENGTH_SHORT).show();
                         finish();
+                        startActivity(new Intent(WritePostActivity.this,MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK));
 
                     }
                 });

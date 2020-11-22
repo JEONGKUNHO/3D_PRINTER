@@ -30,7 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="400dp"
         android:layout_marginTop="30dp"
-        android:scaleType="centerCrop"
+        android:scaleType="centerInside"
         android:src="@drawable/common_google_signin_btn_icon_dark" />
     <TextView
         android:layout_width="wrap_content"
@@ -38,7 +38,7 @@
         android:id="@+id/intro_intro"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
-        android:text="intro"
+        android:text="별내에 위치한 3D프린터 전문 회사입니다."
         android:textSize="20sp"
         android:textColor="#000"/>
 </LinearLayout>

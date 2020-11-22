@@ -19,13 +19,15 @@ public class companyIntro3 extends AppCompatActivity{
 
         image=(ImageView)findViewById(R.id.intro_image);
         intro=findViewById(R.id.intro_intro);
-        image.setImageResource(R.drawable.company3);
+        image.setImageResource(R.drawable.companyimg3);
 
 
 
         intro.setText(getIntent().getStringExtra("comp_intro"));
 
-
+        if(getIntent().getStringExtra("comp_intro")==null){
+            intro.setText("평내에 위치한 3D프린터 전문 회사입니다.");
+        }
     }
 }
 

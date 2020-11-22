@@ -45,6 +45,7 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.BoardViewHol
         holder.content.setText(arrayList.get(position).getContent());
         holder.writer.setText(arrayList.get(position).getWriter());
         holder.date.setText(arrayList.get(position).getDate());
+        holder.phone.setText(arrayList.get(position).getPhone());
         a=arrayList.get(position).getComplete();
 
         if(a==1){
@@ -60,6 +61,7 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.BoardViewHol
                 intent.putExtra("board_writer", arrayList.get(position).getWriter());
                 intent.putExtra("board_image", arrayList.get(position).getImageUrl());
                 intent.putExtra("board_complete",arrayList.get(position).getComplete());
+                intent.putExtra("board_phone",arrayList.get(position).getPhone());
                 v.getContext().startActivity(intent);
             }
         });
@@ -75,6 +77,7 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.BoardViewHol
         TextView title;
         TextView content;
         TextView date;
+        TextView phone;
         TextView writer;
         Button complete;
         Button delete;
@@ -94,6 +97,7 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.BoardViewHol
             this.delete = itemView.findViewById(R.id.delete);
             this.complete = itemView.findViewById(R.id.complete);
             this.num = itemView.findViewById(R.id.Board_complete);
+            this.phone = itemView.findViewById(R.id.Board_phone);
         }
         final public void complete12(){
             num.setVisibility(View.VISIBLE);
